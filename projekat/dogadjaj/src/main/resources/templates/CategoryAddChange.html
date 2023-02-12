@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link th:href="@{../css/styles.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="danger">
+        <a th:href="@{/AdminMenu}"><h3><--</h3></a>
+        <h2>Category add/change page</h2>
+      </div>
+
+    <div class="catControl">
+      <div class="catAdd">
+        <button class="btn-danger mb-4" id="b1">Add category</button>
+      <form class="formCategory" method="post" th:action="@{/CategoryAddChange}" th:object="${cat}">
+          <div class="form-outline mb-4">
+            <input type="text" id="form4Example1" class="form-control" name="nameCategory"  required="true"/>
+            <label class="form-label" for="form4Example1">Name</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="text" id="form4Example2" class="form-control" name="UrlIkona" required="true" />
+            <label class="form-label" for="form4Example2">Image link</label>
+          </div>
+          <button type="submit" class="btn btn-danger btn-block mb-4">Save</button>
+        </form>
+      </div>
+      <div class="changeCat">
+        <button class="btn-danger mb-4" id="b2">Change category</button>
+        <div class="TochangeCat">
+          <div class="catGet" th:each="category : ${categories} ">
+            <h5 th:text="${category.Categoryid}"></h5>
+            <h5 th:text="${category.nameCategory}"></h5>
+            <img th:src="${category.UrlIkona}" />
+          </div>
+        </div>
+
+            <form class="formCatCahange">
+            
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1" class="form-control" />
+                <label class="form-label" for="form3Example1">ID</label>
+              </div>
+            
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example3" class="form-control" />
+                <label class="form-label" for="form3Example3">Name</label>
+              </div>
+            
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Url image</label>
+              </div>
+
+            
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-danger btn-block mb-4">Save</button>
+            </form>
+          
+      </div>
+
+    </div>
+</body>
+</html>

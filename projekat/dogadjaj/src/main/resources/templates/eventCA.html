@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link th:href="@{../css/styles.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <div class="danger">
+    <h2>Event add/change page</h2>
+  </div>
+    <div class="formInputEvent">
+          <form th:object="${events}">
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" name="nameEvent" />
+                  <label class="form-label" for="form6Example1">Event name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" placeholder="14.12.2022 (dd.mm.yyy)" name="datum" />
+                  <label class="form-label" for="form6Example2">Date</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="form6Example3" class="form-control"  name="urlPhoto"/>
+              <label class="form-label" for="form6Example3">Url image</label>
+            </div>
+          
+            <!-- Text input -->
+            <div class="form-outline mb-4">
+              <select class="form-select" aria-label="Default select example" name="lokacija"
+                <option th:each="${locations}" th:text="${locations.getNameLocation()}" th:value="${locations.Locationid}">Open this select menu</option>
+              </select>
+            </div>
+          
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form6Example5" class="form-control" />
+              <label class="form-label" for="form6Example5">Email</label>
+            </div>
+
+          
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <textarea class="form-control" id="form6Example7" rows="4" name="opis"></textarea>
+              <label class="form-label" for="form6Example7">Description</label>
+            </div>
+        
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-danger btn-block mb-4">Save</button>
+          </form>
+    </div>
+</body>
+</html>

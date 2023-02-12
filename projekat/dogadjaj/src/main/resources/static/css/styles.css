@@ -1,0 +1,308 @@
+.body{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Inter";
+}
+
+
+.nav-item:where(a:hover){
+    color: white;
+    text-decoration: underline;
+
+}
+
+
+.logo{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-family: "Inter";
+    padding: 10px;
+    margin: 7px;
+}
+.logo:hover{
+    color: none;
+    text-decoration: underline;
+}
+
+.nav-link{
+    color: white;
+    font-family: "Inter";
+    font-size: 18px;
+}
+
+.formDiv{
+    min-height: 75vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.danger{
+    display: flex;
+    min-width: 100%;
+    background-color: #db3434;
+    max-width: 200px;
+    align-items: center;
+}
+.danger h2{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.danger a{
+    color: white;
+}
+
+.danger a:hover{
+    color:#db3434;
+    text-decoration: none;
+    background-color: white;
+}
+.forma{
+    min-width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.regDiv{
+    max-height: 80vh;
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links a{
+    text-decoration: underline;
+    color: #db3434;
+}
+.links a:hover{
+    color: #db3434;
+}
+.horizontalLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#under a{
+    color: #db3434;
+    text-decoration: underline;
+}
+#under a:hover{
+    color: #db3434;
+}
+
+.locAdd{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLocation{
+    width: 50%;
+}
+
+.formCategory{
+    width: 70%;
+}
+
+.admnNav{
+    min-height: 85vh ;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.admnNav a{
+    max-width: 60%;
+}
+
+.admnNav a:hover{
+   background-color: white;
+   color: #db3434;
+}
+#b1{
+    width: 100%;
+    background-color: white;
+    color: #db3434;
+    border:1px solid #db3434;
+    border-left: none;
+    border-right: none;
+}
+#b2{
+    width: 100%;
+    background-color: white;
+    color: #db3434;
+    border:1px solid #db3434;
+    border-right: none;
+}
+
+.catAdd{
+    width: 40%;
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.catControl{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.TochangeCat{
+
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    flex-wrap: wrap;
+
+
+}
+.changeCat{
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.catGet{
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    margin-left: 20px;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+}
+.catGet h5{
+    margin-right: 10px;
+}
+.catGet img{
+    width: 25px;
+    height: 25px;
+}
+.formCatCahange{
+    width: 60% ;
+}
+
+.locControl{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.locAdd{
+    width: 40%;
+    max-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.changeLoc{
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.cardDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+#c1{
+    box-shadow: 0 4px 8px 0 #db3434;
+    transition: 1.15s;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#c1 img{
+    width: 205px;
+    height: 130px;
+}
+
+.formLocCahange{
+    width: 60%;
+    margin-top: 40px;
+}
+#l1{
+    width: 100%;
+    background-color: white;
+    color: #db3434;
+    border:1px solid #db3434;
+    border-left: none;
+    border-right: none;
+}
+#l2{
+    width: 100%;
+    background-color: white;
+    color: #db3434;
+    border:1px solid #db3434;
+    border-right: none;
+}
+
+.EventBtns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+    justify-content: center;
+}
+
+.formInputEvent{
+   display: flex;
+   max-width: 100%;
+   height: 80vh;
+   align-items: center;
+    justify-content: space-around;
+}
+
+.formEvent{
+    width: 60%;
+}
+
+.cardsEvents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
